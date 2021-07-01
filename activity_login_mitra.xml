@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_utama"
+    tools:context=".LoginMitra">
+
+    <ImageView
+        android:id="@+id/bg_register"
+        android:layout_width="0dp"
+        android:layout_height="265dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/bg_orange_gradieent" />
+
+    <ImageView
+        android:id="@+id/imageView9"
+        android:layout_width="140dp"
+        android:layout_height="140dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/inverse_logo" />
+
+    <TextView
+        android:id="@+id/textView20"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="LOGIN MITRA"
+        android:textColor="@color/white"
+        android:textSize="22dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView9" />
+
+    <EditText
+        android:id="@+id/editTextTextEmailAddress"
+        android:layout_width="0dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="40dp"
+        android:background="@drawable/custom_input"
+        android:drawableStart="@drawable/custom_email_focus"
+        android:drawablePadding="30dp"
+        android:ems="10"
+        android:inputType="textEmailAddress"
+        android:paddingStart="18dp"
+        android:paddingEnd="18dp"
+        android:hint="Email"
+        android:textColor="@color/grey"
+        android:textSize="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bg_register" />
+
+    <EditText
+        android:id="@+id/editTextTextPassword"
+        android:layout_width="0dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/custom_input"
+        android:drawableStart="@drawable/custom_key_focus"
+        android:drawablePadding="30dp"
+        android:ems="10"
+        android:inputType="textPassword"
+        android:paddingStart="18dp"
+        android:paddingEnd="18dp"
+        android:hint="Password"
+        android:textColor="@color/grey"
+        android:textSize="15dp"
+        app:layout_constraintEnd_toEndOf="@+id/editTextTextEmailAddress"
+        app:layout_constraintStart_toStartOf="@+id/editTextTextEmailAddress"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextEmailAddress" />
+
+    <ImageView
+        android:id="@+id/btn_login"
+        android:layout_width="0dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="50dp"
+        android:clickable="true"
+        android:onClick="onClick"
+        android:foreground="?android:attr/selectableItemBackground"
+        app:layout_constraintEnd_toEndOf="@+id/editTextTextPassword"
+        app:layout_constraintStart_toStartOf="@+id/editTextTextPassword"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword"
+        app:srcCompat="@drawable/bg_orange_circle" />
+
+    <ImageView
+        android:id="@+id/btn_daftar"
+        android:layout_width="0dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="16dp"
+        android:clickable="true"
+        android:onClick="onClick"
+        android:foreground="?android:attr/selectableItemBackground"
+        app:layout_constraintEnd_toEndOf="@+id/btn_login"
+        app:layout_constraintStart_toStartOf="@+id/btn_login"
+        app:layout_constraintTop_toBottomOf="@+id/btn_login"
+        app:srcCompat="@drawable/bg_orange_circle" />
+
+    <TextView
+        android:id="@+id/textView26"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="LOGIN"
+        android:textColor="@color/white"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_login"
+        app:layout_constraintEnd_toEndOf="@+id/btn_login"
+        app:layout_constraintStart_toStartOf="@+id/btn_login"
+        app:layout_constraintTop_toTopOf="@+id/btn_login" />
+
+    <TextView
+        android:id="@+id/textView36"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="DAFTAR"
+        android:textColor="@color/white"
+        android:textSize="18dp"
+        android:onClick="onClick"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_daftar"
+        app:layout_constraintEnd_toEndOf="@+id/btn_daftar"
+        app:layout_constraintStart_toStartOf="@+id/btn_daftar"
+        app:layout_constraintTop_toTopOf="@+id/btn_daftar" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

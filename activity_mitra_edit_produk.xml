@@ -1,0 +1,420 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_utama"
+    tools:context=".activity.MitraEditProdukActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar3"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout4"
+        android:layout_width="0dp"
+        android:layout_height="75dp"
+        android:layout_marginTop="3dp"
+        android:background="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar3">
+
+        <EditText
+            android:id="@+id/editTextEditMitraNamaProduk"
+            android:layout_width="0dp"
+            android:layout_height="35dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="16dp"
+            android:backgroundTint="@color/white"
+            android:ems="10"
+            android:hint="Masukkan Nama Produk"
+            android:inputType="text"
+            android:textSize="13dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView52" />
+
+        <TextView
+            android:id="@+id/textView52"
+            android:layout_width="wrap_content"
+            android:layout_height="19dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:text="Nama Produk"
+            android:textColor="@color/intro_deskripsi"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textviewcount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="8dp"
+            android:text="0/100"
+            android:textSize="12dp"
+            app:layout_constraintBottom_toTopOf="@+id/editTextEditMitraNamaProduk"
+            app:layout_constraintEnd_toEndOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout6"
+        android:layout_width="0dp"
+        android:layout_height="75dp"
+        android:layout_marginTop="8dp"
+        android:background="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout4">
+
+        <EditText
+            android:id="@+id/editTextDeskripsi"
+            android:layout_width="0dp"
+            android:layout_height="35dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="16dp"
+            android:backgroundTint="@color/white"
+            android:ems="10"
+            android:hint="Masukkan Deskripsi Produk"
+            android:inputType="textPersonName"
+            android:textSize="13dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView56" />
+
+        <TextView
+            android:id="@+id/textView56"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:text="Detail Produk"
+            android:textColor="@color/intro_deskripsi"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout11"
+        android:layout_width="0dp"
+        android:layout_height="250dp"
+        android:layout_marginTop="8dp"
+        android:background="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout6">
+
+        <View
+            android:id="@+id/divider9"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="2dp"
+            android:background="?android:attr/listDivider"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/kategorieditmitra" />
+
+        <View
+            android:id="@+id/divider12"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="2dp"
+            android:background="?android:attr/listDivider"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/hargaeditmitra" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/kategorieditmitra"
+            android:layout_width="match_parent"
+            android:layout_height="95dp"
+            android:clickable="true"
+            android:foreground="?android:attr/selectableItemBackground"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/imageView7"
+                android:layout_width="35dp"
+                android:layout_height="45dp"
+                android:layout_marginStart="8dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_list" />
+
+            <TextView
+                android:id="@+id/textView64"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="Kategori"
+                android:textColor="@color/black"
+                app:layout_constraintBottom_toBottomOf="@+id/imageView7"
+                app:layout_constraintStart_toEndOf="@+id/imageView7"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <RadioGroup
+                android:id="@+id/radiogroup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageView7">
+
+                <RadioButton
+                    android:id="@+id/radioButtonRajut"
+                    android:layout_width="110dp"
+                    android:layout_height="36dp"
+                    android:layout_marginBottom="8dp"
+                    android:shadowColor="@color/orange"
+                    android:text="Rajut"
+                    android:textColor="@color/black"
+                    android:textColorHighlight="@color/orange"
+                    android:textColorHint="@color/orange"
+                    android:textColorLink="@color/orange"
+                    android:textSize="13dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/imageView7" />
+
+                <RadioButton
+                    android:id="@+id/radioButtonBatik"
+                    android:layout_width="110dp"
+                    android:layout_height="36dp"
+                    android:layout_marginStart="8dp"
+                    android:text="Batik"
+                    android:textSize="13dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/radioButtonRajut"
+                    app:layout_constraintStart_toEndOf="@+id/radioButtonRajut" />
+
+                <RadioButton
+                    android:id="@+id/radioButtonDaurulang"
+                    android:layout_width="110dp"
+                    android:layout_height="36dp"
+                    android:layout_marginStart="8dp"
+                    android:text="Daur Ulang"
+                    android:textSize="13dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/radioButtonBatik"
+                    app:layout_constraintStart_toEndOf="@+id/radioButtonBatik" />
+            </RadioGroup>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/hargaeditmitra"
+            android:layout_width="0dp"
+            android:layout_height="75dp"
+            android:clickable="true"
+            android:foreground="?android:attr/selectableItemBackground"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/kategorieditmitra">
+
+            <EditText
+                android:id="@+id/editTextHarga"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="5dp"
+                android:backgroundTint="@color/white"
+                android:ems="10"
+                android:hint="Masukkan Harga Produk"
+                android:inputType="number"
+                android:textSize="13dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <ImageView
+                android:id="@+id/imageView22"
+                android:layout_width="30dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="10dp"
+                app:layout_constraintBottom_toTopOf="@+id/editTextHarga"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_tag" />
+
+            <TextView
+                android:id="@+id/textView68"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="Harga"
+                android:textColor="@color/black"
+                app:layout_constraintBottom_toTopOf="@+id/editTextHarga"
+                app:layout_constraintStart_toEndOf="@+id/imageView22"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/grosireditmitra"
+            android:layout_width="0dp"
+            android:layout_height="75dp"
+            android:layout_marginTop="5dp"
+            android:clickable="true"
+            android:foreground="?android:attr/selectableItemBackground"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/hargaeditmitra">
+
+            <ImageView
+                android:id="@+id/imageView23"
+                android:layout_width="30dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="10dp"
+                app:layout_constraintBottom_toTopOf="@+id/editTextJumlah"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_dashboard" />
+
+            <TextView
+                android:id="@+id/textView69"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="Jumlah Produk"
+                android:textColor="@color/black"
+                app:layout_constraintBottom_toTopOf="@+id/editTextJumlah"
+                app:layout_constraintStart_toEndOf="@+id/imageView23"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/editTextJumlah"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="5dp"
+                android:backgroundTint="@color/white"
+                android:ems="10"
+                android:hint="Masukkan Jumlah Produk"
+                android:inputType="number"
+                android:textSize="13dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginTop="8dp"
+        android:background="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout11">
+
+        <ImageView
+            android:id="@+id/imageView27"
+            android:layout_width="80dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:clickable="true"
+            android:foreground="?android:attr/selectableItemBackground"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/box_outline" />
+
+        <TextView
+            android:id="@+id/textView70"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="+ Tambah Foto"
+            android:textColor="@color/orange"
+            android:textSize="10dp"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView27"
+            app:layout_constraintEnd_toEndOf="@+id/imageView27"
+            app:layout_constraintStart_toStartOf="@+id/imageView27"
+            app:layout_constraintTop_toTopOf="@+id/imageView27" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:layout_width="0dp"
+        android:layout_height="65dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/btn_batal"
+                android:layout_width="150dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                android:clickable="true"
+                android:onClick="onClick"
+                android:foreground="?android:attr/selectableItemBackground"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/btn_outline" />
+
+            <TextView
+                android:id="@+id/textView71"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Batal"
+                android:textColor="@color/orange"
+                app:layout_constraintBottom_toBottomOf="@+id/btn_batal"
+                app:layout_constraintEnd_toEndOf="@+id/btn_batal"
+                app:layout_constraintStart_toStartOf="@+id/btn_batal"
+                app:layout_constraintTop_toTopOf="@+id/imageView28" />
+
+            <ImageView
+                android:id="@+id/btn_updateproduk"
+                android:layout_width="150dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="32dp"
+                android:layout_marginBottom="16dp"
+                android:onClick="onClick"
+                android:foreground="?android:attr/selectableItemBackground"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/btn_gradient"
+                tools:ignore="OnClick" />
+
+            <TextView
+                android:id="@+id/textView72"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Update"
+
+                android:textColor="@color/white"
+                app:layout_constraintBottom_toBottomOf="@+id/btn_updateproduk"
+                app:layout_constraintEnd_toEndOf="@+id/btn_updateproduk"
+                app:layout_constraintStart_toStartOf="@+id/btn_updateproduk"
+                app:layout_constraintTop_toTopOf="@+id/btn_updateproduk" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.bottomnavigation.BottomNavigationView>
+</androidx.constraintlayout.widget.ConstraintLayout>
